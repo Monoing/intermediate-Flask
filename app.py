@@ -37,6 +37,20 @@ def id():
             <li><a href="/draw/3">Draw</a></li>
         </ul>'''
 
+
+@app.route('/sum/<x>/<y>')
+def sm(x,y):
+    try:
+        z = int(x) + int(y)
+        return  f"The result of sum between {x} and {y} is {z}"
+    except:
+        return "You are using miss data type for operation"
+    
+@app.route('/concat/<x>/<y>')
+def ct(x,y):
+    z = x + y
+    return  f"The result of concatenate between {x} and {y} is {z}"
+
 if __name__ == '__main__':
 
-    app.run(port=80, debug=True)
+    app.run(host='0.0.0.0', port=80, debug=True)
