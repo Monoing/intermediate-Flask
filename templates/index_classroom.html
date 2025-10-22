@@ -1,0 +1,20 @@
+<html>  
+    <head><title>Flask Template Example</title></head>
+<body>
+    <h1>Japan</h1>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/tech">Tech</a></li>
+    </ul>
+    <img src="static/fuji.jpg"alt='japan'>
+    <div><p>{{message}}</p><p>{{contacts}}</p>
+        <p>My contacts:</p>
+        <ul>
+            {% for contact in contacts %}
+            <li>{{contact}}</li>
+            {%endfor%}
+        </ul>
+
+    </div>
+</body>
+</html>
